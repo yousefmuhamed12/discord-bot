@@ -1,5 +1,6 @@
-// Load environment variables FIRST
-require("dotenv").config();
+// Load environment variables FIRST from this file's folder
+const path = require('path');
+require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const { 
   Client, 
